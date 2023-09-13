@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Tab from "./src/navigation/Tab";
 import HomeScreen from "./src/components/Home";
 import AppBlock from "./src/components/AppBlock";
+import Settings from "./src/components/Settings";
 import { NavigationContainer } from "@react-navigation/native";
 import { Foundation } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -26,6 +27,15 @@ export default function App() {
             tabBarBadge: 3,
             tabBarIcon: ({ focused, color, size }) => {
               return <MaterialIcons name="app-blocking" size={24} color="black" />;
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Settings"
+          component={Settings}
+          options={{
+            tabBarIcon: ({ focused, color, size }) => {
+              return <MaterialIcons name="settings" size={24} color="black" />;
             },
           }}
         />
